@@ -4598,34 +4598,8 @@
     <input type="hidden" name="_captcha" value="false">
 
                                                                     <input id="next" type="hidden" name="_next" value="">
-                                                                    <script>
-function setPagePathWithoutLastSegment() {
-    let path = window.location.pathname;
-
-    // Remove trailing slash if it exists
-    if(path.endsWith('/')) {
-        path = path.slice(0, -1);
-    }
-
-    // Split the path by slashes and remove the last segment
-    const pathSegments = path.split('/');
-    pathSegments.pop();
-
-    // Join the segments back together
-    const newPath = pathSegments.join('/');
-
-    // Set the content of the div with ID 'origin' to the new path
-    document.getElementById('next').value = newPath;
-}
-
-setPagePathWithoutLastSegment();
-
-
-
-
-
-
-
+                                                                     <script>
+                                                                        document.getElementById("next").value = window.location.origin + "/config/settings/billing/success";
                                                                     </script>
 
                                                                     <div data-test="uc-payment-form" class="css-roynbj"
